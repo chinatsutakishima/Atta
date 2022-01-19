@@ -1,0 +1,40 @@
+<section class="hero is-success">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        トイレ一覧
+      </h1>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container itiran">
+    <div class="columns is-multiline">
+      <% @toiles.each do |toile| %>
+        <div class="column_itiran is-4">
+          <div class="card_itiran">
+            <div class="card-image">
+              <figure class="image img_itiran">
+                <%= link_to toile_path(toile) do %>
+                  <%= attachment_image_tag toile, :image, class: "itiran_img_card" %>
+                <% end %>
+              </figure>
+            </div>
+            <div class="card-content_itiran">
+              <div class="media">
+                <div class="media-content">
+                  <div class="title_toile"><%=link_to toile.title, toile_path(toile) %></div>
+                </div>
+              </div>
+
+              <!--<div class="content">
+                <time><%= toile.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
+              </div> -->
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

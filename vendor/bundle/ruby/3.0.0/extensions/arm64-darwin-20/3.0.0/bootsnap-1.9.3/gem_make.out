@@ -1,0 +1,15 @@
+current directory: /Users/takishimachinatsu/app/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.3/ext/bootsnap
+/Users/takishimachinatsu/.anyenv/envs/rbenv/versions/3.0.2/bin/ruby -I /Users/takishimachinatsu/.anyenv/envs/rbenv/versions/3.0.2/lib/ruby/3.0.0 -r ./siteconf20211228-37509-8apkju.rb extconf.rb
+creating Makefile
+
+current directory: /Users/takishimachinatsu/app/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.3/ext/bootsnap
+make DESTDIR\= clean
+
+current directory: /Users/takishimachinatsu/app/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.3/ext/bootsnap
+make DESTDIR\=
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/takishimachinatsu/app/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.3/ext/bootsnap
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20211228-37509-tvo6ru/bootsnap

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous" />
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if flash[:notice] %>
+      <div class="notification is-info">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>
+
+    <% if flash[:alert] %>
+      <div class="notification is-danger">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
+    <div class="image_matome">
+      <div class="top_image1"></div>
+      <div class="top_image2"></div>
+    </div>
+
+
+    <nav class="navbar is-warning">
+        <div class="navbar-brand">
+          <%= link_to root_path, class: "navbar-item" do %>
+            <h1 class="title is-4" style="font-family: Noteworthy;">ATTA!</h1>
+          <% end %>
+          <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <% if user_signed_in? %>
+            <p class="control sp">
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "sp_logout" %>
+            </p>
+          <% else %>
+            <p class="control">
+              <%= link_to "新規登録", new_user_registration_path, class: "sp_logout" %>
+            </p>
+          <% end %>
+        </div>
+
+        <% if user_signed_in? %>
+          <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-item">
+            <%= link_to "レシピ一覧", toiles_path, class: "navbar-item button is-warning is-light" %>
+          </div>
+          <div class="navbar-item">
+            <%= link_to "レシピ投稿", new_toile_path, class: "navbar-item button is-warning is-light" %>
+          </div>
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <div class="field is-grouped">
+                  <p class="control">
+                    <%= link_to "レシピグラマー一覧", users_path, class: " button is-warning is-light" %>
+                  </p>
+                  <p class="control">
+                    <%= link_to "マイページ", user_path(current_user), class: "button is-warning is-light" %>
+                  </p>
+                  <p class="control">
+                    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light" %>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% else %>
+          <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-item">
+              <%= link_to "レシピ一覧", toiles_path, class: "navbar-item button is-warning is-light" %>
+            </div>
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <div class="field is-grouped">
+                  <p class="control">
+                    <%= link_to "レシピグラマー一覧", users_path, class: " button is-warning is-light" %>
+                  </p>
+                  <p class="control">
+                    <%= link_to "ログイン", new_user_session_path, class: "button is-warning is-light" %>
+                  </p>
+                  <p class="control">
+                    <%= link_to "新規登録", new_user_registration_path, class: "button is-warning is-light" %>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+      </nav>
+
+      <% if user_signed_in? %>
+        <footer class="sp">
+          <div class="footer_inner">
+            <p class="footer_button curretnt">
+                <%= link_to "/" do %>
+                  <span><i class="fas fa-home size"></i></span>
+                  <br>ホーム
+                <% end %>
+              </p>
+            <p class="footer_button">
+              <%= link_to "/toiles" do %>
+                <span><i class="fas fa-restroom size"></i></span>
+                <br>トイレ一覧
+              <% end %>
+            </p>
+            <p class="footer_button">
+              <%= link_to user_path(current_user) do %>
+                <span><i class="fas fa-user size"></i></span>
+                <br>マイページ
+              <% end %>
+            </p>
+          </div>
+        </footer>
+      <% else %>
+        <footer class="sp">
+          <div class="footer_inner">
+            <p class="footer_button curretnt">
+                <%= link_to "/" do %>
+                  <span><i class="fas fa-home size"></i></span>
+                  <br>ホーム
+                <% end %>
+              </p>
+            <p class="footer_button">
+              <%= link_to "/toiles" do %>
+                <span><i class="fas fa-restroom size"></i></span>
+                <br>トイレ一覧
+              <% end %>
+            </p>
+            <p class="footer_button">
+              <%= link_to new_user_session_path do %>
+                <span><i class="fas fa-user size"></i></span>
+                <br>ログイン
+              <% end %>
+            </p>
+          </div>
+        </footer>
+      <% end %>
+
+      <%= link_to new_toile_path do%>
+      <div class="new_make fa-lg"></div>
+      <% end %>
+
+    <%= yield %>
+  </body>
+</html>

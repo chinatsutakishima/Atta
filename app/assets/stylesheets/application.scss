@@ -1,0 +1,388 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bulma";
+
+.notification:not(:last-child){
+	margin-bottom: 0;
+}
+
+.profile_image {
+ border-radius: 50%;
+}
+
+.main-image {
+	height: 940px;
+	background-image: url(meal.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.body{
+	position: relative;
+}
+.pc{
+	display: block;
+}
+.sp{
+	display: none;
+}
+
+@media screen and (min-width: 0px){
+.navbar-menu {
+    flex-grow: 1;
+    flex-shrink: 0;
+		display: none;
+}
+.navbar-brand{
+	background-color: #1C83AF;
+}
+.title.is-4 {
+  color: #fff;
+	font-size: 26px;
+	margin-left: 11px;
+}
+.navbar-burger {
+    display: none;
+}
+.title {
+    margin-left: 0;
+}
+.is-size-1 {
+    font-size: 60px !important;
+		color: #1C83AF;
+		letter-spacing: 0.1em;
+}
+.h1_span{
+	font-size: 18px;
+	color: #626262;
+	margin-top: 1vw;
+  display: block;
+}
+.media-content {
+    overflow-x: unset;
+		z-index: 3;
+}
+.button.is-warning {
+  background-color: #1C83AF;
+  border-color: transparent;
+  color: #fff;
+	border-radius: 50vw;
+}
+.button.is-fullwidth {
+	display: flex;
+  width: 280px;
+  margin: 0 auto;
+  padding: 28px 0;
+  font-size: 18px;
+}
+.button.is-warning2 {
+  background-color: #fff;
+  border-color: transparent;
+  color: #1C83AF;
+  border-radius: 50vw;
+	border: 1px solid #1C83AF;
+}
+.top_button {
+  margin: 170px auto 0;
+}
+.image_matome{
+	width: 100%;
+	max-width: 400px;
+	margin: 0 auto;
+	position: relative;
+}
+.top_image1 {
+    background-image: url(top_image.png);
+		height: 234px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    max-width: 120px;
+    position: absolute;
+    right: 0px;
+    top: 120px;
+}
+.top_image2 {
+	background-image: url(top_image2.png);
+	height: 234px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100%;
+	max-width: 120px;
+	position: absolute;
+	left: 0px;
+	top: 430px;
+}
+.navbar-brand, .navbar-tabs {
+    align-items: stretch;
+    display: flex;
+    flex-shrink: 0;
+    min-height: 80px;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+}
+footer{
+	position: fixed;
+	bottom: 0;
+	box-shadow: 0 -9px 17px 2px #f5f5f5;
+	width: 100%;
+	z-index: 10;
+	background-color: #fff;
+}
+.footer_inner{
+  display: flex;
+  padding: 20px 0 42px;
+	justify-content: space-evenly;
+	max-width: 400px;
+	margin: 0 auto;
+}
+.footer_button{
+	text-align: center;
+  font-size: 13px;
+	width: 100%;
+  max-width: 67px;
+}
+.footer_button:last-of-type{
+	margin-right: 0;
+}
+.size{
+  font-size: 1.8em; /*1.5倍にする*/
+}
+.footer_button i{
+	margin-bottom: 1vw;
+}
+.footer_button a{
+	color: #5e5e5e;
+}
+.button.is-warning:hover{
+	background-color: #1C83AF;
+	color: #fff;
+}
+.profiler-results.profiler-top.profiler-left {
+    left: 0px;
+    display: none;
+}
+.navbar.is-warning .navbar-brand > a.navbar-item:focus, .navbar.is-warning .navbar-brand > a.navbar-item:hover, .navbar.is-warning .navbar-brand > a.navbar-item.is-active, .navbar.is-warning .navbar-brand .navbar-link:focus, .navbar.is-warning .navbar-brand .navbar-link:hover, .navbar.is-warning .navbar-brand .navbar-link.is-active{
+		background-color: #1C83AF;
+}
+.hero-body {
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 80px 0 0;
+    background-color: #fff;
+}
+.hero.is-info .title {
+    color: #1C83AF;
+		font-size: 30px;
+		text-align: center;
+}
+.hero.is-info {
+	background-color: #3298dc;
+  color: #fff;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.navbar {
+    background-color: white;
+    min-height: 80px;
+    position: relative;
+    z-index: 30;
+}
+.pc{
+	display: none;
+}
+.sp{
+	display: block;
+}
+.sp_logout{
+	background-color: #fff;
+  color: #1C83AF;
+  margin-right: 16px;
+  padding: 9px 20px;
+  border-radius: 7px;
+}
+.section {
+    padding: 70px 25px 200px;
+}
+.hero.is-success .title{
+	color: #1C83AF;
+	font-size: 25px;
+	text-align: center;
+}
+.title_toile a{
+	font-size: 16px;
+	color: #4a4a4a!important;
+	text-align: center;
+	display: block;
+	font-weight: bold;
+}
+.card {
+    background-color: white;
+    border-radius: 0.25rem;
+    color: #4a4a4a;
+    position: relative;
+		margin: 0 auto;
+
+}
+.card_itiran{
+	background-color: white;
+	border-radius: 0.25rem;
+	color: #4a4a4a;
+	position: relative;
+	margin: 20px auto 0;
+	width: 130px!important;
+	box-shadow: 0px 0px 20px -6px rgba(112,112,112,0.6);
+}
+.mypage_td td{
+	width: 100%;
+	display: block;
+}
+.table {
+    background-color: transparent!important;
+    color: #363636;
+}
+strong {
+    color: #363636;
+    font-weight: 700;
+    font-size: 25px!important;
+}
+.mt_small{
+	margin-top: -12px;
+}
+.button.is-primary {
+    background-color: #00d1b2;
+    border-color: transparent;
+    color: #fff;
+    width: 100%;
+    padding: 24px 0;
+    margin-top: 16px;
+}
+.sec_mypage{
+	padding-bottom: 0px;
+}
+.button.is-success {
+    background-color: #48c774;
+    border-color: transparent;
+    color: #fff;
+    width: 100%;
+    margin-top: 20px;
+}
+.card-content {
+    background-color: transparent;
+    padding: 31px 16px;
+}
+.black{
+	margin-left: 7px;
+	font-size: 23px;
+}
+.itiran{
+	width: 100%!important;
+}
+.img_itiran{
+	padding-top: 10px;
+  max-width: 120px;
+  margin: 10px auto 0;
+}
+.card-content_itiran {
+    background-color: transparent;
+    padding: 11px 16px 30px;
+}
+.new_make{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background: #1C83AF;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-o-border-radius: 50px;
+	-ms-border-radius: 50px;
+	border-radius: 50px;
+	position: fixed;
+	bottom: 131px;
+	right: 20px;
+	z-index: 10;
+}
+.new_make::before{
+	font-family: "Font Awesome 5 Free";
+	content: '\f067';
+	font-weight: 900;
+	color: #fff;
+	padding: 17px 16px;
+	display: block;
+}
+.column_itiran{
+	display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  /* padding: 0.75rem; */
+  margin-right: 10px;
+  width: 100%;
+  max-width: 140px;
+}
+.column_itiran:nth-of-type(even){
+	margin-right: 0;
+}
+.columns.is-multiline {
+  flex-wrap: wrap;
+  display: flex;
+	justify-content: center;
+}
+.itiran_img_card{
+	height: 85px!important;
+	border-radius: 0!important;
+}
+.container {
+    max-width: 340px;
+}
+}
+
+
+
+@media screen and (min-width: 769px){
+.columns_mypage {
+	display: block!important;
+		width: 100%;
+    margin: 0;
+}
+.column.is-8, .column.is-8-tablet {
+    flex: none;
+    width: 100%;
+		max-width: 400px;
+}
+.column.is-6, .column.is-6-tablet {
+    flex: none;
+    width: 100%;
+		max-width: 340px;
+}
+.column.is-7, .column.is-7-tablet {
+    flex: none;
+    width: 100%;
+    max-width: 340px;
+}
+.column.is-4, .column.is-4-tablet {
+    flex: none;
+    width: 100%;
+    max-width: 340px;
+}
+}
+@media screen and (min-width: 1216px){
+.container:not(.is-max-desktop) {
+    max-width: 340px;
+}
+}
